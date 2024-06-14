@@ -21,9 +21,9 @@ ODRL considers four varied experimental settings for off-dynamics RL, where the 
 
 ## 🚀Getting Started
 
-Our benchmark is *installation-free*, i.e., one do not need to run `pip install -e .`. This is because users may have multiple local environments which actually share numerous packages like `torch`, making it a waste of space to create another conda environment for running ODRL. Installing ODRL in some existing environments may corrupts that environment. ODRL relies on some most commonly adopted packages, which should be easily satisfied: `python==3.8.13, torch==1.11.0, gym==0.18.3, dm-control==1.0.8, numpy==1.23.5, d4rl==1.1, mujoco-py==2.1.2.14`.
+Our benchmark is *installation-free*, i.e., one does not need to run `pip install -e .`. This design choice is motivated by the fact that users may have multiple local environments which actually share numerous packages like `torch`, making it a waste of space to create another conda environment for running ODRL. Moreover, the provided packages may conflict with existing ones, posing a risk of corrupting the current environment. As a result, we do not offer a `setup.py` file. ODRL relies on some most commonly adopted packages, which should be easily satisfied: `python==3.8.13, torch==1.11.0, gym==0.18.3, dm-control==1.0.8, numpy==1.23.5, d4rl==1.1, mujoco-py==2.1.2.14`.
 
-Nevertheless, we totally understand that some users may still need the detailed list of dependencies, and hence we also include the `requirement.txt` in ODRL. Run the following commands:
+Nevertheless, we totally understand that some users may still need the detailed list of dependencies, and hence we also include the `requirement.txt` in ODRL. To use it, run the following commands:
 ```bash
 conda create -n offdynamics python=3.8.13 && conda activate offdynamics
 pip install setuptools==63.2.0
@@ -49,7 +49,8 @@ where $J_\pi$ is the return of the agent in the target domain, $J_{\rm expert}$ 
 * `algo` contains the implemented off-dynamics RL algorithms as well as our introduced baseline methods. These algorithms are categoried by varied experimental settings.
 * `config` contains the `yaml` configuration files for each algorithm across different domains
 * `envs` contains various domains and the revised `xml` files of the environments with dynamics shift.
-* `dataset` is the folder where the offline target domain datasets are stored (one needs to manually download them from [here])
+* `dataset` is the folder where the offline target domain datasets are stored (one needs to manually download them from [here](https://drive.google.com/drive/folders/1fwkjtXCbMxVP7RM7NSN3mF40Gakwkqei?usp=sharing))
+* `imgs` contains the illustration figure of this project
 
 ## 🚀🚀Experimental Settings and Implemented Algorithms 
 
