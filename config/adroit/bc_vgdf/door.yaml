@@ -1,0 +1,53 @@
+model_config:
+  dynamics_elite_size: 5
+  dynamics_ensemble_size: 7
+  dynamics_hidden_size: 200
+  policy_hiddens:
+  - 256
+  - 256
+  policy_initializer: xavier uniform
+  policy_log_std_max: 2.0
+  policy_log_std_min: -10.0
+  policy_nonlinear: ReLU
+  value_hiddens:
+  - 256
+  - 256
+  value_initializer: xavier uniform
+  value_nonlinear: ReLU
+
+
+state_dim: 27
+action_dim: 8
+ac_gradient_clip: 100
+alpha: 0.2
+batch_size: 128
+lr: 0.0003
+gamma: 0.99
+max_epochs_since_update_decay_interval: 150000.0
+
+optimistic: True
+
+tau: 0.005
+training_delay: 2
+
+src_buffer_size: 1000000
+tar_buffer_size: 1000000
+
+dynamics_batch_size: 256
+dynamics_holdout_ratio: 0.1
+dynamics_max_epochs_since_update: 5
+dynamics_train_freq: 250
+
+eval_episode: 5
+eval_freq: 10000
+max_step: 1000000
+tar_env_interact_freq: 10
+
+device: cuda
+
+save_freq: 50000
+
+likelihood_gate_threshold: 0.75
+start_gate_src_sample: 100000.0
+bc_coeff: 5.0
+use_q_decay: True

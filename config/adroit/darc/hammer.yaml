@@ -1,0 +1,29 @@
+alpha: 0.2
+batch_size: 128
+actor_lr: 0.0003
+critic_lr: 0.0003
+gamma: 0.99
+
+state_dim: 17
+action_dim: 3
+hidden_sizes: 256
+max_action: 1
+
+gaussian_noise_std: 1.0
+penalty_coefficient: 1.0
+
+temperature_opt: False
+
+tau: 0.005
+update_interval: 2
+expl_noise: 0.2
+
+eval_episode: 10
+eval_freq: 10000
+start_steps: 5000
+max_step: 1000000
+tar_env_interact_freq: 10
+
+device: cuda
+
+save_freq: 5000
