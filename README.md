@@ -35,7 +35,7 @@ We summarize the benchmark overview below. We provide two metrics for evaluating
 
 $NS = \dfrac{J_\pi - J_{\rm random}}{J_{\rm expert}- J_{\rm random}}\times 100,$
 
-where $J_\pi$ is the return of the agent in the target domain, $J_{\rm expert}$ is the return of an expert policy, and $J_{\rm random}$ is the reference score of the random policy. Please check out the corresponding reference scores for the expert policy and the random policy of all tasks in [`infos.py`](./envs/infos.py).
+where $J_\pi$ is the return of the agent in the target domain, $J_{\rm expert}$ is the return of an expert policy, and $J_{\rm random}$ is the reference score of the random policy. Please check out the corresponding reference scores for the expert policy and the random policy of all tasks in `envs/infos.py`.
 
 | Task Domain   | Friction | Gravity | Kinematic | Morphology | Map Layout | Offline Datasets |
 |---------------|----------|----------|----------|----------|----------|----------|
