@@ -19,6 +19,23 @@ ODRL considers four varied experimental settings for off-dynamics RL, where the 
 * ✨ Offering offline target domain datasets
 * ✨ Supporting a wide spectrum of dynamics shifts
 
+## Connections and Comparison against Other Benchmarks
+
+ODRL is related to numerous transfer RL/multi-task RL benchmarks. We include a comparison of ODRL against some commonly used benchmarks below, including [D4RL](https://github.com/Farama-Foundation/D4RL), [DMC suite](https://github.com/google-deepmind/dm_control), [Meta-World](https://github.com/Farama-Foundation/Metaworld), [RLBench](https://github.com/stepjam/RLBench), [CARL](https://github.com/automl/CARL), [Gym-extensions](https://github.com/Breakend/gym-extensions/), [Continual World](https://github.com/awarelab/continual_world). 
+
+| Benchmark | Offline datasets | Diverse Domains | Multi-task | Single-task Dynamics Shift |
+| ----    | :---: | :---: | :---: | :---: |
+| D4RL            | ✅ | ✅ | ❎ | ❎ |
+| DMC suite       | ❎ | ✅ | ❎ | ❎ |
+| Meta-World      | ❎ | ❎ | ✅ | ❎ |
+| RLBench         | ✅ | ❎ | ✅ | ❎ |
+| CARL            | ❎ | ✅ | ❎ | ✅ |
+| Gym-extensions  | ❎ | ❎ | ✅ | ✅ |
+| Continual World | ❎ | ❎ | ✅ | ❎ |
+| **ODRL**        | ✅ | ✅ | ❎ | ✅ |
+
+Among these benchmarks, D4RL only contains single-domain offline datasets and does not focus on the off-dynamics RL issue. DMC suite contains a wide range of tasks, but it does not offer offline datasets and does not handle the off-dynamics RL. Meta-world is designed for the multi-task RL setting. RLBench provides demonstrations for numerous tasks but it does not involve the dynamics shift in a single task. CARL focuses on the setting where the context of the environment (e.g., reward, dynamics) can change between different episodes (i.e., it does not have a *source domain* or *target domain*, but only one domain where the dynamics or rewards can change depending on the context). CARL also does not provide offline datasets. Continual world is a benchmark for continual learning in RL, and also supports multi-task learning can be used for transfer RL policies. ODRL, instead, **focuses on the setting where the agent can leverage source domain data to facilitate the policy training in the target domain, where the task in the source domain and the target domain keeps identical**.
+
 ## 🚀Getting Started
 
 Our benchmark is *installation-free*, i.e., one does not need to run `pip install -e .`. This design choice is motivated by the fact that users may have multiple local environments which actually share numerous packages like `torch`, making it a waste of space to create another conda environment for running ODRL. Moreover, the provided packages may conflict with existing ones, posing a risk of corrupting the current environment. As a result, we do not offer a `setup.py` file. ODRL relies on some most commonly adopted packages, which should be easily satisfied: `python==3.8.13, torch==1.11.0, gym==0.18.3, dm-control==1.0.8, numpy==1.23.5, d4rl==1.1, mujoco-py==2.1.2.14`.
@@ -127,6 +144,14 @@ We directly adopt offline source domain datasets from the popular [D4RL](https:/
 ## Licences
 
 Our repository is licensed under the MIT licence. The adopted Gym environments and mujoco-py are also licensed under the MIT License. For the D4RL library (including the Antmaze domain and the Adroit domain, and offline datasets), all datasets are licensed under the Creative Commons Attribution 4.0 License (CC BY), and code is licensed under the Apache 2.0 License.
+
+## TODO
+
+We plan to support more real-world robotic environments and include implementations of recent off-dynamics RL algorithms.
+
+- Add tasks on Sawyer robots (based on Meta-World)
+- Support Humanoid tasks in ODRL
+- and more!
 
 ## 📄Citing ODRL
 
