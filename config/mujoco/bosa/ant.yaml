@@ -1,0 +1,39 @@
+batch_size: 128
+actor_lr: 0.0003
+critic_lr: 0.0003
+gamma: 0.99
+
+state_dim: 17
+action_dim: 3
+hidden_sizes: 256
+max_action: 1
+
+tau: 0.005
+update_interval: 2
+expl_noise: 0.2
+noise_clip: 0.5
+
+eval_episode: 10
+eval_freq: 10000
+start_steps: 5000
+max_step: 500000
+
+device: cuda
+
+save_freq: 5000
+
+vae_policy_lr: 0.001
+vae_policy_hidden_dim: 750
+vae_policy_beta: 0.5
+vae_dyna_lr: 0.001
+vae_dyna_ensemble: 5
+vae_dyna_hidden_dim: 750
+vae_dyna_beta: 0.5
+vae_iteration: 100000
+ 
+lamda_policy: 0.1
+lamda_dyna: 0.1
+epsilon_policy_exp: 0.01
+epsilon_dyna_exp: 0.01
+conservation_coef: 0.1
+num_samples: 1
