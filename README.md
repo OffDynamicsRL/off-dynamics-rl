@@ -1,5 +1,29 @@
 # ODRL: An Off-dynamics Reinforcement Learning Benchmark
 
+## NEW: we support Sawyer robots and Humanoid task in this branch [Still under development!!!]
+
+![A brief overview of the ODRL Sawyer robot tasks.](./imgs/ODRLsawyerrobot.png)
+
+We support 5 kinds of Sawyer robot tasks under kinematic shifts and morphology shifts with shift level *easy/medium/hard* now! These tasks are adapted from the Meta-World benchmark. We limit the rotation range of all joints in the Sawyer robot to simulate broken joints, and change the size of the left and right grippers of the Sawyer robot to simulate morphology shifts. The five tasks are box, button-press, pick-place, push, hammer. One can directly use `call_sawyer_env.py` to call tasks with the Sawyer. Generally, it share a similar way of calling environments as those in the MuJoCo or Adroit domains. All Sawyer tasks have `sawyer` in their environment names. The naming rule for Sawyer robot gives `Sawyer-[task_name]-[shift_type]-[shift_part (optional)]-[shift_level]`, e.g., you can call `sawyer-pick-place-morph-gripper` task with shift level `easy` with the following codes:
+```
+from sawyer.call_sawyer_env import call_sawyer_env
+
+env_config = {
+    'env_name': 'sawyer-pick-place-morph-gripper',
+    'shift_level': 'easy',
+}
+
+env = call_sawyer_env(env_config)
+
+obs = env.reset()  # Reset environment
+a = env.action_space.sample()  # Sample an action
+obs, reward, done, info = env.step(a)
+```
+
+**YOU DO NOT NEED TO INSTALL METAWORLD TO RUN THOSE TASKS!!!** Please let us know if there are any bugs!
+
+===============
+
 <p align="center">
   <br />
   <a href="./LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-red.svg" /></a>
