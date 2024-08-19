@@ -2,9 +2,6 @@
 site_name: ODRL
 site_description: "A Benchmark for Off-dynamics RL"
 repo_name: OffDynamicsRL/off-dynamics-rl
-# repo_url: https://github.com/appl-team/appl
-# site_url: https://appl-team.github.io/appl/
-# edit_uri: edit/main/docs/
 copyright: Copyright &copy; 2024
 
 validation:

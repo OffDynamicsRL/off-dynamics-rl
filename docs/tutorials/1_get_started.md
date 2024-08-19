@@ -72,6 +72,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --policy PAR_BC --env ant-morph-alllegs -
 CUDA_VISIBLE_DEVICES=0 python train.py --policy BOSA --env walker2d-kinematic-footjnt --shift_level medium --srctype medium --tartype medium --seed 1 --mode 3 --dir runs
 ```
 We explain some key flags below:
+
 - `--env` specifies the name of the target domain, and the source domain will be automatically prepared
 - `--shift_level` specifies the shift level for the task
 - `--srctype` specifies the dataset quality of the source domain dataset
