@@ -151,6 +151,7 @@ We plan to support more real-world robotic environments and include implementati
 
 - Add tasks on Sawyer robots (based on Meta-World)
 - Support Humanoid tasks in ODRL
+- Support Gymnasium
 - and more!
 
 ## 📄Citing ODRL
