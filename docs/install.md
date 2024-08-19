@@ -4,7 +4,7 @@ Our benchmark is *installation-free*, i.e., one does not need to run `pip instal
 
 ## Basic Usage
 
-To use our benchmark, clone the repository and then you can start the journal!
+To use our benchmark, clone the repository and then you can start the journey!
 
 ```
 git clone https://github.com/OffDynamicsRL/off-dynamics-rl.git

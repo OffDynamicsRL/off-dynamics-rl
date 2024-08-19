@@ -1,6 +1,6 @@
 # Using ODRL with Other Algorithms or Benchmarks
 
-In practice, one may want to use ODRL in their own environments or using their own algorithms without relying on our training scripts. We provide two functions to call environments and datasets from ODRL, `call_odrl_env` and `call_odrl_dataset`.
+In practice, one may want to use ODRL in their own environments or using their own algorithms without relying on our training scripts. We provide two functions to call environments and datasets from ODRL, `call_odrl_env` and `call_odrl_dataset` in `call_odrl_env.py`.
 
 It is super simple to use them, for example, `call_odrl_env`,
 

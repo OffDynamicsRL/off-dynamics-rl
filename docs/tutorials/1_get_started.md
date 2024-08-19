@@ -58,3 +58,33 @@ env_config = {
 env = call_adroit_env(env_config)
 ```
 
+## Running Implemented Algorithms
+
+We run all four experimental settings with the `train.py` file, with `mode 0` denotes the **Online-Online** setting, `mode 1` denotes the **Offline-Online** seting, `mode 2` specifies the **Online-Offline** setting, and `mode 3` means the **Offline-Offline** setting. One can switch different setting by specifying the `--mode` flag. The default value is 0, i.e., **Online-Online** setting. We give an example of how to use our benchmark below:
+```bash
+# online-online
+CUDA_VISIBLE_DEVICES=0 python train.py --policy DARC --env hopper-kinematic-legjnt --shift_level easy --seed 1 --mode 0 --dir runs
+# offline-online
+CUDA_VISIBLE_DEVICES=0 python train.py --policy CQL_SAC --env ant-friction --shift_level 0.5 --srctype medium-replay --seed 1 --mode 1 --dir runs
+# online-offline
+CUDA_VISIBLE_DEVICES=0 python train.py --policy PAR_BC --env ant-morph-alllegs --shift_level hard --tartype expert --seed 1 --mode 2 --dir runs
+# offline-offline
+CUDA_VISIBLE_DEVICES=0 python train.py --policy BOSA --env walker2d-kinematic-footjnt --shift_level medium --srctype medium --tartype medium --seed 1 --mode 3 --dir runs
+```
+We explain some key flags below:
+* `--env` specifies the name of the target domain, and the source domain will be automatically prepared
+* `--shift_level` specifies the shift level for the task
+* `--srctype` specifies the dataset quality of the source domain dataset
+* `--tartype` specifies the dataset quality of the target domain dataset
+* `--params` specifies the hyperparameter for the underlying algorithm if one wants to change the default hyperparameters, e.g., `--params '{"actor_lr": 0.003}'`
+
+We directly adopt offline source domain datasets from the popular [D4RL](https://github.com/Farama-Foundation/D4RL) library. Please note that different dynamics shift tasks have varied shift levels. We summarize the shift levels for different tasks below.
+
+| Task          | Supported Shift Levels |
+|---------------|-----------------|
+| **Locomotion friction/gravity**  | 0.1, 0.5, 2.0, 5.0 |
+| **Locomotion kinematic/morphology**  | easy, medium, hard |
+| **Antmaze small maze**| centerblock, empty, lshape, zshape, reverseu, reversel  | 
+| **Antmaze medium/large maze**| 1, 2, 3, 4, 5, 6 | 
+| **Dexterous Manipulation**| easy, medium, hard |
+
