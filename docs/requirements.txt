@@ -1,0 +1,9 @@
+mkdocs
+mkdocstrings[python]
+mkdocs-material
+mkdocs-jupyter
+# mkdocs-autolinks-plugin
+mkdocs-coverage
+markdown-exec
+mkdocs-gen-files
+mkdocs-literate-nav

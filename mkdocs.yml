@@ -1,0 +1,111 @@
+# Modified based on https://github.com/mkdocstrings/mkdocstrings/blob/main/mkdocs.yml
+site_name: ODRL
+site_description: "A Benchmark for Off-dynamics RL"
+repo_name: OffDynamicsRL/off-dynamics-rl
+# repo_url: https://github.com/appl-team/appl
+# site_url: https://appl-team.github.io/appl/
+# edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2024
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+nav:
+  - Introduction:
+    - Welcome to ODRL: index.md
+    - Installation Guide: install.md
+  - Tutorials:
+    - tutorials/index.md
+    - Getting Started: tutorials/1_get_started.md
+    - Call Example: tutorials/2_call_example.md
+  - Citation:
+    - Cite: cite.md
+  - References:
+    - references.md
+
+theme:
+  name: "material"
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
+  features:
+  - announce.dismiss
+  - content.action.edit
+  - content.action.view
+  - content.code.annotate
+  - content.code.copy
+  - content.code.select
+  - content.tooltips
+  - navigation.expand
+  - navigation.footer
+  - navigation.indexes
+  - navigation.path
+  - navigation.sections
+  - navigation.tabs
+  # - navigation.tabs.sticky
+  - navigation.top
+  - navigation.tracking
+  - search.highlight
+  - search.suggest
+  - toc.follow
+  palette:
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: teal
+    accent: purple
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: black
+    accent: lime
+    toggle:
+      icon: material/weather-night
+      name: Switch to system preference
+
+extra_css:
+- style.css
+
+# https://facelessuser.github.io/pymdown-extensions/
+markdown_extensions:
+- admonition
+- attr_list
+- footnotes
+- md_in_html
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+# - pymdownx.magiclink:
+#     normalize_issue_symbols: true
+#     repo_url_shorthand: true
+#     user: appl-team
+#     repo: appl
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.snippets:
+    base_path: [!relative $config_dir]
+    check_paths: true
+- pymdownx.superfences
+- pymdownx.tabbed:
+    alternate_style: true
+    slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
+- toc:
+    permalink: true
+
