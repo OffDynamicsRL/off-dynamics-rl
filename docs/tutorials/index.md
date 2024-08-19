@@ -8,4 +8,4 @@ ODRL is the first benchmark for off-dynamics RL problems, in which there is a li
 
 ## Audience
 
-ODRL is based on Python, so it is suitable for Python developers (and newcomers in RL!!). Please get yourself familiar with Python before diving into APPL. If you are new to Python, you can start with the [official Python tutorial](https://docs.python.org/3/tutorial/index.html).
+ODRL is based on Python, so it is suitable for Python developers (and newcomers in RL!!). Please get yourself familiar with Python before diving into ODRL. If you are new to Python, you can start with the [official Python tutorial](https://docs.python.org/3/tutorial/index.html).

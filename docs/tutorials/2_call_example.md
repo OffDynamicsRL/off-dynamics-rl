@@ -10,7 +10,7 @@ call_odrl_env(env_type='mujoco',
                   shift_level='0.5'):
 ```
 
-One needs to specify the env_type (should be one of `mujoco, antmaze, adroit, sawyer`), the environment name (e.g., 'pen-broken-joint'), as well as the shift level. It then returns the environment in ODRL.
+One needs to specify the env_type (should be one of `mujoco, antmaze, adroit, sawyer`), the environment name (e.g., `pen-broken-joint`), as well as the shift level. It then returns the environment in ODRL.
 
 To call datasets from ODRL, it is recommended to use the `call_odrl_dataset` function,
 
