@@ -72,11 +72,11 @@ CUDA_VISIBLE_DEVICES=0 python train.py --policy PAR_BC --env ant-morph-alllegs -
 CUDA_VISIBLE_DEVICES=0 python train.py --policy BOSA --env walker2d-kinematic-footjnt --shift_level medium --srctype medium --tartype medium --seed 1 --mode 3 --dir runs
 ```
 We explain some key flags below:
-* `--env` specifies the name of the target domain, and the source domain will be automatically prepared
-* `--shift_level` specifies the shift level for the task
-* `--srctype` specifies the dataset quality of the source domain dataset
-* `--tartype` specifies the dataset quality of the target domain dataset
-* `--params` specifies the hyperparameter for the underlying algorithm if one wants to change the default hyperparameters, e.g., `--params '{"actor_lr": 0.003}'`
+- `--env` specifies the name of the target domain, and the source domain will be automatically prepared
+- `--shift_level` specifies the shift level for the task
+- `--srctype` specifies the dataset quality of the source domain dataset
+- `--tartype` specifies the dataset quality of the target domain dataset
+- `--params` specifies the hyperparameter for the underlying algorithm if one wants to change the default hyperparameters, e.g., `--params '{"actor_lr": 0.003}'`
 
 We directly adopt offline source domain datasets from the popular [D4RL](https://github.com/Farama-Foundation/D4RL) library. Please note that different dynamics shift tasks have varied shift levels. We summarize the shift levels for different tasks below.
 
