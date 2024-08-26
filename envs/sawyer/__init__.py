@@ -64,6 +64,252 @@ register(
 
 
 register(
+    id='sawyer-button-press-topdown-v2', entry_point='sawyer_xyz.v2.sawyer_button_press_topdown_v2:SawyerButtonPressTopdownEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_button_press_topdown.xml'
+    }
+)
+
+register(
+    id='sawyer-button-press-topdown-broken-easy-v2', entry_point='sawyer_xyz.v2.sawyer_button_press_topdown_v2:SawyerButtonPressTopdownEnvV2', 
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_button_press_topdown_broken_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-button-press-topdown-morph-gripper-easy-v2', entry_point='sawyer_xyz.v2.sawyer_button_press_topdown_v2:SawyerButtonPressTopdownEnvV2', 
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_button_press_topdown_morph_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-button-press-topdown-broken-medium-v2', entry_point='sawyer_xyz.v2.sawyer_button_press_topdown_v2:SawyerButtonPressTopdownEnvV2', 
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_button_press_topdown_broken_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-button-press-topdown-morph-gripper-medium-v2', entry_point='sawyer_xyz.v2.sawyer_button_press_topdown_v2:SawyerButtonPressTopdownEnvV2', 
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_button_press_topdown_morph_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-button-press-topdown-broken-hard-v2', entry_point='sawyer_xyz.v2.sawyer_button_press_topdown_v2:SawyerButtonPressTopdownEnvV2', 
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_button_press_topdown_broken_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-button-press-topdown-morph-gripper-hard-v2', entry_point='sawyer_xyz.v2.sawyer_button_press_topdown_v2:SawyerButtonPressTopdownEnvV2', 
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_button_press_topdown_morph_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-close-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_close_v2:SawyerDrawerCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-close-broken-easy-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_close_v2:SawyerDrawerCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_broken_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-close-broken-medium-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_close_v2:SawyerDrawerCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_broken_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-close-broken-hard-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_close_v2:SawyerDrawerCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_broken_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-close-morph-gripper-easy-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_close_v2:SawyerDrawerCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_morph_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-close-morph-gripper-medium-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_close_v2:SawyerDrawerCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_morph_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-close-morph-gripper-hard-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_close_v2:SawyerDrawerCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_morph_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-open-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_open_v2:SawyerDrawerOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-open-broken-easy-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_open_v2:SawyerDrawerOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_broken_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-open-broken-medium-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_open_v2:SawyerDrawerOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_broken_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-open-broken-hard-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_open_v2:SawyerDrawerOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_broken_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-open-morph-gripper-easy-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_open_v2:SawyerDrawerOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_morph_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-open-morph-gripper-medium-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_open_v2:SawyerDrawerOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_morph_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-drawer-open-morph-gripper-hard-v2', entry_point='sawyer_xyz.v2.sawyer_drawer_open_v2:SawyerDrawerOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_drawer_morph_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-open-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_open_v2:SawyerFaucetOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-open-broken-easy-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_open_v2:SawyerFaucetOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_broken_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-open-broken-medium-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_open_v2:SawyerFaucetOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_broken_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-open-broken-hard-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_open_v2:SawyerFaucetOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_broken_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-open-morph-gripper-easy-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_open_v2:SawyerFaucetOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_morph_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-open-morph-gripper-medium-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_open_v2:SawyerFaucetOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_morph_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-open-morph-gripper-hard-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_open_v2:SawyerFaucetOpenEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_morph_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-close-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_close_v2:SawyerFaucetCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-close-broken-easy-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_close_v2:SawyerFaucetCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_broken_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-close-broken-medium-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_close_v2:SawyerFaucetCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_broken_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-close-broken-hard-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_close_v2:SawyerFaucetCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_broken_hard_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-close-morph-gripper-easy-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_close_v2:SawyerFaucetCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_morph_easy_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-close-morph-gripper-medium-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_close_v2:SawyerFaucetCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_morph_medium_v2.xml'
+    }
+)
+
+register(
+    id='sawyer-faucet-close-morph-gripper-hard-v2', entry_point='sawyer_xyz.v2.sawyer_faucet_close_v2:SawyerFaucetCloseEnvV2',
+    kwargs={
+        'model_name': '/sawyer_xyz/sawyer_faucet_morph_hard_v2.xml'
+    }
+)
+
+
+register(
     id='sawyer-box-v2', entry_point='sawyer_xyz.v2.sawyer_box_close_v2:SawyerBoxCloseEnvV2',
     kwargs={
         'model_name': '/sawyer_xyz/sawyer_box.xml'

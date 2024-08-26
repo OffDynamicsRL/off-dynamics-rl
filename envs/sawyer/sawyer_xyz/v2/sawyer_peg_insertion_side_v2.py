@@ -4,6 +4,7 @@ from gym.spaces import Box
 from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent.parent.parent.absolute()))
+import os
 
 import reward_utils
 from asset_path_utils import full_v2_path_for

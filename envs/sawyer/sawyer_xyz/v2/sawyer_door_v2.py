@@ -5,6 +5,7 @@ from scipy.spatial.transform import Rotation
 from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent.parent.parent.absolute()))
+import os
 
 import reward_utils
 from asset_path_utils import full_v2_path_for
@@ -12,7 +13,7 @@ from sawyer_xyz.sawyer_xyz_env import SawyerXYZEnv
 
 
 class SawyerDoorEnvV2(SawyerXYZEnv):
-    def __init__(self):
+    def __init__(self, model_name):
 
         hand_low = (-0.5, 0.40, 0.05)
         hand_high = (0.5, 1, 0.5)
@@ -21,8 +22,10 @@ class SawyerDoorEnvV2(SawyerXYZEnv):
         goal_low = (-.3, 0.4, 0.1499)
         goal_high = (-.2, 0.5, 0.1501)
 
+        curr_dir = os.path.join(str(Path(__file__).parent.parent.parent.absolute()), 'assets')
+
         super().__init__(
-            self.model_name,
+            curr_dir + model_name,
             hand_low=hand_low,
             hand_high=hand_high,
         )

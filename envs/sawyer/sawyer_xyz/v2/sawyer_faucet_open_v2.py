@@ -4,6 +4,7 @@ from gym.spaces import Box
 from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent.parent.parent.absolute()))
+import os
 
 import reward_utils
 from asset_path_utils import full_v2_path_for
@@ -12,7 +13,7 @@ from sawyer_xyz.sawyer_xyz_env import SawyerXYZEnv
 
 class SawyerFaucetOpenEnvV2(SawyerXYZEnv):
 
-    def __init__(self):
+    def __init__(self, model_name):
 
         hand_low = (-0.5, 0.40, -0.15)
         hand_high = (0.5, 1, 0.5)
@@ -21,8 +22,10 @@ class SawyerFaucetOpenEnvV2(SawyerXYZEnv):
         self._handle_length = 0.175
         self._target_radius = 0.07
 
+        curr_dir = os.path.join(str(Path(__file__).parent.parent.parent.absolute()), 'assets')
+
         super().__init__(
-            self.model_name,
+            curr_dir + model_name,
             hand_low=hand_low,
             hand_high=hand_high,
         )

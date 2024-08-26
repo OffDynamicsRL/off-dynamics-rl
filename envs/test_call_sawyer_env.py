@@ -4,45 +4,44 @@ from sawyer.call_sawyer_env import call_sawyer_env
 
 import gym
 import numpy as np
+import time
 
 env_config = {
-    'env_name': 'sawyer-pick-place-broken',
-    'shift_level': 'easy',
+    'env_name': 'sawyer-faucet-close-broken',
+    'shift_level': 'medium',
 }
 
 env = call_sawyer_env(env_config)
 
-obs = env.reset()  # Reset environment
-a = env.action_space.sample()  # Sample an action
-obs, reward, done, info = env.step(a)
+# if this is okay, then test scripted policies
 
-print(obs.shape)
-print(a.shape)
+from sawyer.policies.sawyer_faucet_close_v2_policy import SawyerFaucetCloseV2Policy as policy
 
-env_config = {
-    'env_name': 'sawyer-pick-place-morph-gripper',
-    'shift_level': 'easy',
-}
+p = policy()
 
-env = call_sawyer_env(env_config)
+# interact with env
+seed = 2024
 
-obs = env.reset()  # Reset environment
-a = env.action_space.sample()  # Sample an action
-obs, reward, done, info = env.step(a)
+env.seed(seed)
+env.action_space.seed(seed)
+env.observation_space.seed(seed)
+obs = env.reset()
 
-print(obs.shape)
-print(a.shape)
+count = 0
+done = False
 
-env_config = {
-    'env_name': 'sawyer-pick-place',
-    'shift_level': None,
-}
+info = {}
 
-env = call_sawyer_env(env_config)
+while count < 500 and not done:
+    action = p.get_action(obs)
+    next_obs, _, _, info = env.step(action)
+    # env.render()
+    print(count, next_obs)
+    if int(info["success"]) == 1:
+        done = True
+    obs = next_obs
+    time.sleep(0.02)
+    count += 1
 
-obs = env.reset()  # Reset environment
-a = env.action_space.sample()  # Sample an action
-obs, reward, done, info = env.step(a)
+print(info)
 
-print(obs.shape)
-print(a.shape)
