@@ -157,6 +157,11 @@ We plan to support more real-world robotic environments and include implementati
 ## 📄Citing ODRL
 
 If you use ODRL in your research, please consider citing our work 
-```python
-# Paper Under Review, bibtex information will be available soon
+```
+@inproceedings{lyu2024odrlabenchmark,
+ title={ODRL: A Benchmark for Off-Dynamics Reinforcement Learning},
+ author={Lyu, Jiafei and Xu, Kang and Xu, Jiacheng and Yan, Mengbei and Yang, Jingwen and Zhang, Zongzhang and Bai, Chenjia and Lu, Zongqing and Li, Xiu},
+ booktitle={Advances in Neural Information Processing Systems},
+ year={2024}
+}
 ```
