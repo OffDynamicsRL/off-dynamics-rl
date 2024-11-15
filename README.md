@@ -154,6 +154,10 @@ We plan to support more real-world robotic environments and include implementati
 - Support Gymnasium
 - and more!
 
+## NOTE
+
+We have uploaded a revised version of `hopper_kinematic_legjnt_medium_medium.hdf5` due to a bug in dataset collection in 2024/11/15. Please kindly report any bugs or issues you found in this repo.
+
 ## 📄Citing ODRL
 
 If you use ODRL in your research, please consider citing our work 
@@ -161,7 +165,8 @@ If you use ODRL in your research, please consider citing our work
 @inproceedings{lyu2024odrlabenchmark,
  title={ODRL: A Benchmark for Off-Dynamics Reinforcement Learning},
  author={Lyu, Jiafei and Xu, Kang and Xu, Jiacheng and Yan, Mengbei and Yang, Jingwen and Zhang, Zongzhang and Bai, Chenjia and Lu, Zongqing and Li, Xiu},
- booktitle={Advances in Neural Information Processing Systems},
- year={2024}
+  booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year={2024},
+  url={https://openreview.net/forum?id=ap4x1kArGy}
 }
 ```
