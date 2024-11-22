@@ -4,7 +4,7 @@ def call_algo(algo_name, config, mode, device):
     if mode == 0:
         algo_name = algo_name.lower()
         assert algo_name in ['sac', 'darc', 'vgdf', 'sac_iw', 'par']
-        # online online setting, we support SAC, DARC, VGDF
+        # online online setting
         from online_online.darc import DARC
         from online_online.sac import SAC
         from online_online.vgdf import VGDF
@@ -25,7 +25,7 @@ def call_algo(algo_name, config, mode, device):
     elif mode == 1:
         algo_name = algo_name.lower()
         assert algo_name in ['cql_sac', 'bc_vgdf', 'bc_sac', 'h2o', 'mcq_sac', 'rlpd', 'bc_par']
-        # offline online setting, we support SAC, DARC, VGDF
+        # offline online setting
         from offline_online.cql_sac import CQLSAC
         from offline_online.bc_vgdf import BCVGDF
         from offline_online.bc_sac import BCSAC
@@ -69,18 +69,20 @@ def call_algo(algo_name, config, mode, device):
 
     elif mode == 3:
         algo_name = algo_name.lower()
-        assert algo_name in ['dara', 'bosa', 'iql', 'td3_bc']
-        # online online setting, we support SAC, DARC, VGDF
+        assert algo_name in ['dara', 'bosa', 'iql', 'td3_bc', 'igdf']
+        # offline offline setting
         from offline_offline.dara import DARA
         from offline_offline.bosa import BOSA
         from offline_offline.iql import IQL
         from offline_offline.td3_bc import TD3BC
+        from offline_offline.igdf import IGDF
 
         algo_to_call = {
             'dara': DARA,
             'bosa': BOSA,
             'iql': IQL,
             'td3_bc': TD3BC,
+            'igdf': IGDF,
         }
 
         algo = algo_to_call[algo_name]

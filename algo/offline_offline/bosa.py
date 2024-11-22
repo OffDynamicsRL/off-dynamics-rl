@@ -287,7 +287,7 @@ class VAE_Dynamics_Ensemble(nn.Module):
         log_qzx   = td.Normal(loc=mean_enc, scale=std_enc).log_prob(z)
         # p(z)
         mu_prior  = torch.zeros_like(z).to(self.device)
-        std_prior = torch.zeros_like(z).to(self.device)
+        std_prior = torch.ones_like(z).to(self.device)
         log_pz    = td.Normal(loc=mu_prior, scale=std_prior).log_prob(z)
         # p(x|z)
         std_dec   = torch.ones_like(mean_dec).to(self.device) * std_dec

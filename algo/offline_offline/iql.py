@@ -92,7 +92,7 @@ class Policy(nn.Module):
         mu_logstd = self.network(state)
         mu, logstd = mu_logstd.chunk(2, dim=1)
         pred_action = torch.tanh(mu)
-        return F.mse_loss(pred_action, action)
+        return (pred_action - action)**2
 
 class DoubleQFunc(nn.Module):
     
