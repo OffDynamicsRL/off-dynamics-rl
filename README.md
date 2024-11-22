@@ -108,6 +108,7 @@ We implement various baseline algorithms for each setting.
 | ✅ [TD3_BC](https://proceedings.neurips.cc/paper_files/paper/2021/file/a8166da05c5a094f7dc03724b41886e5-Paper.pdf)  | [`offline_offline/td3_bc.py`](algo/offline_offline/td3_bc.py)   |
 | ✅ [DARA](https://arxiv.org/pdf/2203.06662)                  | [`offline_offline/dara.py`](algo/offline_offline/dara.py)   |
 | ✅ [BOSA](https://arxiv.org/pdf/2306.12755)                  | [`offline_offline/bosa.py`](algo/offline_offline/bosa.py)   |
+| ✅ [IGDF](https://arxiv.org/pdf/2405.06192)                  | [`offline_offline/igdf.py`](algo/offline_offline/igdf.py)   |
 
 It is worth noting that when running SAC_tune, one needs to use `train_tune.py` instead of `train.py`.
 
@@ -145,6 +146,12 @@ We directly adopt offline source domain datasets from the popular [D4RL](https:/
 
 Our repository is licensed under the MIT licence. The adopted Gym environments and mujoco-py are also licensed under the MIT License. For the D4RL library (including the Antmaze domain and the Adroit domain, and offline datasets), all datasets are licensed under the Creative Commons Attribution 4.0 License (CC BY), and code is licensed under the Apache 2.0 License.
 
+## Update Log
+
+2024/11/22 We now include the implementation of IGDF in the offline-offline setting.
+
+2024/11/15 We have uploaded a revised version of `hopper_kinematic_legjnt_medium_medium.hdf5` due to a bug in dataset collection. Please kindly report any bugs or issues you found in this repo.
+
 ## TODO
 
 We plan to support more real-world robotic environments and include implementations of recent off-dynamics RL algorithms.
@@ -153,10 +160,6 @@ We plan to support more real-world robotic environments and include implementati
 - Support Humanoid tasks in ODRL
 - Support Gymnasium
 - and more!
-
-## NOTE
-
-We have uploaded a revised version of `hopper_kinematic_legjnt_medium_medium.hdf5` due to a bug in dataset collection in 2024/11/15. Please kindly report any bugs or issues you found in this repo.
 
 ## 📄Citing ODRL
 
