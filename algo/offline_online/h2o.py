@@ -248,8 +248,7 @@ class H2O(object):
     def update_cql_q_functions(self, state_batch, action_batch, reward_batch, nextstate_batch, not_done_batch, writer=None):
         # calculate importance sampling coefficient (IS coef) in H2O
         with torch.no_grad():
-            sas_logits, sa_logits = self.classifier(state_batch, action_batch, nextstate_batch, with_noise=False)
-            sas_probs, sa_probs = F.softmax(sas_logits, -1), F.softmax(sa_logits, -1)
+            sas_probs, sa_probs = self.classifier(state_batch, action_batch, nextstate_batch, with_noise=False)
             sas_log_probs, sa_log_probs = torch.log(sas_probs + 1e-10), torch.log(sa_probs + 1e-10)
             log_importance_weighting = sas_log_probs[:, 1:] - sa_log_probs[:, 1:] - sas_log_probs[:, :1] + sa_log_probs[:,:1]
             importance_weighting = torch.exp(log_importance_weighting)
