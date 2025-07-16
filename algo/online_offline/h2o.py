@@ -291,8 +291,7 @@ class H2O(object):
         next_obs += torch.randn(next_obs.shape, device=self.device) * noise_std
         # measuring the log importance weighting
         with torch.no_grad():
-            sas_logits, sa_logits = self.classifier(obs, act, next_obs, with_noise=False)
-            sas_probs, sa_probs = F.softmax(sas_logits, -1), F.softmax(sa_logits, -1)
+            sas_probs, sa_probs = self.classifier(obs, act, next_obs, with_noise=False)
             sas_log_probs, sa_log_probs = torch.log(sas_probs + 1e-10), torch.log(sa_probs + 1e-10)
             log_importance_weighting = sas_log_probs[:, 1:] - sa_log_probs[:, 1:] - sas_log_probs[:, :1] + sa_log_probs[:,:1]
             log_importance_weighting = log_importance_weighting.reshape((-1, self.config['n_state']))
