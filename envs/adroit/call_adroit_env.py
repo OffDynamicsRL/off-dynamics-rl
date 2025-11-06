@@ -8,12 +8,18 @@ def call_adroit_env(env_config: Dict) -> gym.Env:
 
     if '_' in env_name:
         env_name = env_name.replace('_', '-')
-    # decide which task it is, support the following tasks
-    # pen/hammer/relocate/door         - shrink_finger
-    #                                  - broken_joint
-    assert any([env_name.startswith(f'{e}') for e in ['pen', 'hammer', 'relocate', 'door']])
-    assert any([env_name.endswith(f'{e}') for e in ['shrink-finger', 'broken-joint']])
 
-    env_name = env_name + '-' + str(shift_level) + '-v0'
-
-    return gym.make(env_name)
+    # should install D4RL to create raw Adroit envs, otherwise, please refer to https://github.com/OffDynamicsRL/off-dynamics-rl/blob/6f946e2ec9c1bae00b45096d49ab2a39d9404e6b/envs/adroit/__init__.py#L16
+    if shift_level is None:
+        env_name = env_name + '-v0'
+        return gym.make(env_name)
+    else:
+        # decide which task it is, support the following tasks
+        # pen/hammer/relocate/door         - shrink_finger
+        #                                  - broken_joint
+        assert any([env_name.startswith(f'{e}') for e in ['pen', 'hammer', 'relocate', 'door']])
+        assert any([env_name.endswith(f'{e}') for e in ['shrink-finger', 'broken-joint']])
+    
+        env_name = env_name + '-' + str(shift_level) + '-v0'
+    
+        return gym.make(env_name)
