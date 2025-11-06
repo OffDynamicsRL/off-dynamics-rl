@@ -112,7 +112,7 @@ if __name__ == "__main__":
         if 'antmaze' in src_env_name:
             src_env_config = {
                 'env_name': src_env_name,
-                'shift_level': args.shift_level,
+                'shift_level': None,
             }
             src_env = call_env[domain](src_env_config)
             src_env.seed(args.seed)
@@ -121,7 +121,7 @@ if __name__ == "__main__":
         else:
             src_env_config = {
                 'env_name': src_env_name,
-                'shift_level': args.shift_level,
+                'shift_level': None,
             }
             src_env = call_env[domain](src_env_config)
             src_env.seed(args.seed)
